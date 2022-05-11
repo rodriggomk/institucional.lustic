@@ -106,6 +106,7 @@
 
 .article {}
 
+
 .article .article-section {
   display: flex;
   padding: 4rem 14%;
@@ -144,23 +145,54 @@
 }
 
 .article .videos .video-card {
+  /* height: 40rem; */
+
   flex: 1;
-  height: 40rem;
   display: flex;
   color: #FFFFFF;
-  font-weight: bold;
+  cursor: pointer;
+  position: relative;
   align-items: center;
+  flex-direction: column;
   letter-spacing: 0.04rem;
   justify-content: center;
-  text-transform: uppercase;
+
   background-color: #121212;
 }
 
+.article .videos .video-card button {
+  border: none;
+  gap: 0.75rem;
+  display: flex;
+  color: #FFFFFF;
+  cursor: pointer;
+  font-weight: bold;
+  position: absolute;
+  align-items: center;
+  background: transparent;
+  text-transform: uppercase;
+}
+
 .article .gallery-container {
+  /* padding-left: 14%; */
+
+  padding-top: 5rem;
+  padding-bottom: 5rem;
   background-color: #F5F5F5;
 }
 
-.article .gallery.wedding {
+.article .gallery-container .slide-container {
+  /* padding-right: 14%; */
+}
+
+.article .gallery-container .slide-container .swiper {
+  margin-left: 14%;
+  padding-right: 14rem;
+}
+
+.article .gallery-container .slide-container .swiper .swiper-wrapper {}
+
+.article .gallery-container.wedding {
   background-color: #FFFFFF;
 }
 
@@ -168,8 +200,31 @@
   background-color: #121212;
 }
 
+
+.article .instagram-gallery {
+  padding: 6rem 14%;
+}
+
+.article .instagram-gallery .instagram-action {
+  color: #FFFFFF;
+  margin: auto;
+  opacity: 0.6;
+  display: block;
+  font-size: 12px;
+  font-weight: bold;
+  width: max-content;
+  padding: 12px 30px;
+  letter-spacing: 0.09rem;
+  border: 1px solid #FFFFFF;
+  text-transform: uppercase;
+}
+
+.article .instagram-gallery .instagram-action:hover {
+  opacity: 1;
+}
+
 .footer {
-  display: flex;  
+  display: flex;
   flex-direction: column;
 }
 
@@ -189,7 +244,7 @@
 
 .feature h3 {
   font-size: 1.5rem;
-  font-family: 'Cinzel', serif;  
+  font-family: 'Cinzel', serif;
 }
 
 .feature p {
