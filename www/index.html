@@ -7,6 +7,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Lustic - Calçados para Mulheres em Movimento</title>
 
+  <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css">
   <link rel="stylesheet" href="assets/css/index.css">
 
 </head>
@@ -90,12 +91,101 @@
         </p>
       </div>
     </section>
-    <div></div>
-    <div></div>
-    <div></div>
-    <div></div>
-  </article>
-  <footer></footer>
-</body>
+    <div class="videos">
+      <div class="video-card">
+        <img src="" alt="">
+        <span>Sofisticada</span>
+      </div>
+      <div class="video-card">
+        <img src="" alt="">
+        <span>Poderosa</span>
+      </div>
+      <div class="video-card">
+        <img src="" alt="">
+        <span>Versátil</span>
+      </div>
+    </div>
 
+    <!-- <div class="videos gallery">
+      <div class="video-card">
+        <img src="" alt="">
+        <span>Sofisticada</span>
+      </div>
+      <div class="video-card">
+        <img src="" alt="">
+        <span>Poderosa</span>
+      </div>
+      <div class="video-card">
+        <img src="" alt="">
+        <span>Versátil</span>
+      </div>
+    </div> -->
+
+    <div class="gallery-container">      
+      <div class="swiper mySwiper">
+        <div class="videos gallery swiper-wrapper">
+          <div class="swiper-slide video-card">Slide 1</div>
+          <div class="swiper-slide video-card">Slide 2</div>
+          <div class="swiper-slide video-card">Slide 3</div>
+          <div class="swiper-slide video-card">Slide 4</div>
+          <div class="swiper-slide video-card">Slide 5</div>
+          <div class="swiper-slide video-card">Slide 6</div>
+          <div class="swiper-slide video-card">Slide 7</div>
+          <div class="swiper-slide video-card">Slide 8</div>
+          <div class="swiper-slide video-card">Slide 9</div>
+        </div>
+      </div>
+    </div>
+      
+    <div class="videos gallery wedding">
+      <div class="video-card">
+        <img src="" alt="">
+        <span>Sofisticada</span>
+      </div>
+      <div class="video-card">
+        <img src="" alt="">
+        <span>Poderosa</span>
+      </div>
+      <div class="video-card">
+        <img src="" alt="">
+        <span>Versátil</span>
+      </div>
+    </div>
+
+    <div class="instagram-gallery">
+      <a href="#follow-us" class="instagram-action">
+        Siga-nos no Instagram
+      </a>
+    </div>
+
+  </article>
+  <footer class="footer">
+    <div class="features-container">
+      <div class="feature">
+        <h3>Loja física</h3>
+        <p>Nossa loja conceito está localizada no Shopping Palladium Umuarama. Av. Paraná, 8455 - Parque Industrial II, Umuarama - PR</p>
+      </div>
+      <div class="feature">
+        <h3>Vendas Online</h3>
+        <p>Compre pelo whatsApp com uma das nossas consultoras de vendas. Enviamos para todo o Brasil.</p>
+      </div>
+      <div class="feature">
+        <h3>Contato</h3>
+        <p></p>
+      </div>
+    </div>
+    <div class="footer-rights">
+      <p>Copyright © 2022 - Lustic Shoes. TODOS OS DIREITOS RESERVADOS.</p>
+    </div>
+  </footer>
+
+  <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+  <script>
+    var swiper = new Swiper(".mySwiper", {
+      slidesPerView: 3,
+      spaceBetween: 30,
+      loop: false,
+    });
+  </script>
+</body>
 </html>

@@ -104,13 +104,12 @@
   height: auto;
 }
 
-.article {
-  padding: 4rem 14%;
-  background-color: #121212;
-}
+.article {}
 
 .article .article-section {
   display: flex;
+  padding: 4rem 14%;
+  background-color: #121212;
 }
 
 .article .article-text {
@@ -136,4 +135,71 @@
   font-weight: 500;
   font-size: 2.5rem;
   text-transform: uppercase;
+}
+
+.article .videos {
+  gap: 2.5rem;
+  display: flex;
+  padding: 5rem 14%;
+}
+
+.article .videos .video-card {
+  flex: 1;
+  height: 40rem;
+  display: flex;
+  color: #FFFFFF;
+  font-weight: bold;
+  align-items: center;
+  letter-spacing: 0.04rem;
+  justify-content: center;
+  text-transform: uppercase;
+  background-color: #121212;
+}
+
+.article .gallery-container {
+  background-color: #F5F5F5;
+}
+
+.article .gallery.wedding {
+  background-color: #FFFFFF;
+}
+
+.article .instagram-gallery {
+  background-color: #121212;
+}
+
+.footer {
+  display: flex;  
+  flex-direction: column;
+}
+
+.features-container {
+  gap: 5rem;
+  display: flex;
+  padding: 6.5rem 14%;
+}
+
+.feature {
+  flex: 1;
+  gap: 1rem;
+  display: flex;
+  text-align: center;
+  flex-direction: column;
+}
+
+.feature h3 {
+  font-size: 1.5rem;
+  font-family: 'Cinzel', serif;  
+}
+
+.feature p {
+  font-size: 1rem;
+  line-height: 1.5rem;
+  text-transform: uppercase;
+}
+
+.footer-rights {
+  font-size: 14px;
+  padding: 4.5rem 14%;
+  border-top: 1px solid #DDDDDD;
 }
