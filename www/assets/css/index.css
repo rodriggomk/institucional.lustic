@@ -1,5 +1,11 @@
 @import url('https://fonts.googleapis.com/css2?family=Cinzel&family=Montserrat:wght@200;300;400;500;700&display=swap');
 
+body,
+html {
+  max-width: 1920px;
+  margin: auto;
+}
+
 * {
   margin: 0;
   padding: 0;
@@ -106,6 +112,7 @@
 
 .article {}
 
+
 .article .article-section {
   display: flex;
   padding: 4rem 14%;
@@ -144,23 +151,69 @@
 }
 
 .article .videos .video-card {
+  /* height: 40rem; */
+
   flex: 1;
-  height: 40rem;
   display: flex;
   color: #FFFFFF;
-  font-weight: bold;
+  cursor: pointer;
+  position: relative;
   align-items: center;
+  flex-direction: column;
   letter-spacing: 0.04rem;
   justify-content: center;
+
+  background-color: #FFFFFF;
+}
+
+.article .videos .video-card button {
+  border: none;
+  gap: 0.75rem;
+  display: flex;
+  color: #FFFFFF;
+  cursor: pointer;
+  font-weight: bold;
+  position: absolute;
+  align-items: center;
+  background: transparent;
   text-transform: uppercase;
-  background-color: #121212;
 }
 
 .article .gallery-container {
+  /* padding-left: 14%; */
+
+  padding-top: 5rem;
+  padding-bottom: 5rem;
   background-color: #F5F5F5;
 }
 
-.article .gallery.wedding {
+.article .gallery-container .slide-container {
+  /* padding-right: 14%; */
+  width: 100%;
+}
+
+.article .gallery-container .slide-container .swiper {
+  margin-left: 14%;
+  padding-right: 14rem;
+}
+
+.article .gallery-container .slide-container .swiper .swiper-wrapper {
+  
+}
+
+.article .gallery-container .slide-container .swiper .swiper-wrapper .swiper-slide {
+  width: max-content;
+}
+
+.article .gallery-container .slide-container .swiper .swiper-wrapper .image-card img {
+  max-height: 600px;
+}
+
+.article .gallery-container .slide-container .swiper .swiper-wrapper .image-card.play-video {
+  cursor: pointer;
+}
+
+.article .gallery-container.wedding {
   background-color: #FFFFFF;
 }
 
@@ -168,8 +221,47 @@
   background-color: #121212;
 }
 
+
+.article .instagram-gallery {
+  padding: 6rem 14%;
+}
+
+.article .instagram-gallery .pics-gallery {
+  margin: auto;
+  display: flex;
+  height: 100px;
+  background:red;
+  max-width: 1144px;
+  gap: 10px;
+}
+
+.article .instagram-gallery .pics-gallery img {
+  flex: 4;
+  /* width: 25%;
+  height: 50px; */
+  border: 1px solid white;
+}
+
+.article .instagram-gallery .instagram-action {
+  color: #FFFFFF;
+  margin: auto;
+  opacity: 0.6;
+  display: block;
+  font-size: 12px;
+  font-weight: bold;
+  width: max-content;
+  padding: 12px 30px;
+  letter-spacing: 0.09rem;
+  border: 1px solid #FFFFFF;
+  text-transform: uppercase;
+}
+
+.article .instagram-gallery .instagram-action:hover {
+  opacity: 1;
+}
+
 .footer {
-  display: flex;  
+  display: flex;
   flex-direction: column;
 }
 
@@ -189,7 +281,7 @@
 
 .feature h3 {
   font-size: 1.5rem;
-  font-family: 'Cinzel', serif;  
+  font-family: 'Cinzel', serif;
 }
 
 .feature p {
