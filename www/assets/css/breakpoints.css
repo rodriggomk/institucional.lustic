@@ -1,0 +1,10 @@
+@media (max-width: 1368px) {
+  .navbar {
+    padding: 0.8rem 3%;
+    height: max-content;
+  }
+
+  .navbar .brand .brand-title {
+    font-size: 0.8rem;
+  }
+}

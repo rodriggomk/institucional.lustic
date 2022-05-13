@@ -1,3 +1,23 @@
+window.onscroll = () => stickyNavMenu();
+
+var weedingGalery = document.getElementById('wedding-gallery');
+var distance = weedingGalery.offsetTop;
+
+var navbar = document.getElementById('nav');
+
+function stickyNavMenu() {
+  if (window.pageYOffset >= 5) {
+    navbar.classList.add('sticky')
+  } else {
+    navbar.classList.remove('sticky');
+  } 
+
+  if ((window.pageYOffset+300) >= distance) {
+    navbar.classList.add('wedding-logo')
+  } else {
+    navbar.classList.remove('wedding-logo')
+  }
+}
 
 var dimmer = document.querySelector('.dimmer');
 var player = document.getElementById('player');

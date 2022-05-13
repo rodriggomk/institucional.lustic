@@ -5,6 +5,12 @@ html {
   margin: auto;
   max-width: 1920px;
   overflow-x: hidden;
+  transition: all .2s;
+  image-rendering: -moz-crisp-edges;
+  image-rendering:   -o-crisp-edges;
+  image-rendering: -webkit-optimize-contrast;
+  image-rendering: crisp-edges;
+  /* image-rendering: pixelated; */
 }
 
 * {
@@ -18,48 +24,107 @@ html {
 }
 
 .navbar {
+  top: 0;
+  left: 0;
+  gap: 1rem;
+  width: 100%;
+  z-index: 40;
+  height: 9rem;
   display: flex;
-  padding: 1.8rem 14%;
+  position: absolute;
+  padding: 0.8rem 3%;
+  align-items: center;
+  transition: all .2s;
+  flex-direction: column;
   background-color: #FFFFFF;
 }
 
+.sticky {
+  gap: 0;
+  top: 0;
+  left: 0;
+  height: 6rem;
+  position: fixed;
+}
+
 .navbar .blank-space {
-  flex: 1;
+  
 }
 
 .navbar .brand {
-  flex: 3;
-  gap: 8px;
+  gap: 0.8rem;
   display: flex;
-  align-items: center;
   flex-direction: column;
-  justify-content: center;
 }
 
+.navbar.sticky .brand {
+  
+}
+
+
 .navbar .brand .brand-link {
-  margin: auto;
+  display: flex;
+  align-items: center;
+  justify-content: center;  
+}
+
+.navbar .brand .brand-link .wedding {
+  max-height: 1.8rem;
+}
+
+.navbar .brand .brand-link .wedding svg {
+  width: 0;
+  height: 0;
+  overflow: hidden;
+  transition: all .2s;
+}
+
+.navbar.sticky.wedding-logo .brand .brand-link {
+  
+}
+
+.navbar.sticky.wedding-logo .brand .brand-link .wedding {
+  max-height: 1.8rem;
+  margin-left: 0.8rem;
+}
+
+.navbar.sticky.wedding-logo .brand .brand-link .wedding svg {
+  width: auto;
+  height: 2rem;
+  overflow: hidden;
+  transition: all .2s;
+}
+
+.navbar .brand .brand-link img {
+  width: 8rem;
 }
 
 .navbar .brand .brand-title {
-  font-size: 1.15rem;
+  height: 0.8rem;
   font-weight: 500;
+  font-size: 0.8rem;
   text-align: center;
-  letter-spacing: 0.04em;
+  transition: all .2s;
   text-transform: uppercase;
 }
 
+.navbar.sticky .brand .brand-title {
+  transition: all .2s;
+  overflow: hidden;
+  height: 0;
+}
+
+
 .navbar .nav-links {
-  flex: 1;
-  gap: 30px;
+  gap: 1.5rem;
   display: flex;
-  align-items: center;
-  justify-content: flex-end;
 }
 
 .header {
   width: 100%;
   height: auto;
   display: flex;
+  padding-top: 9rem;
   flex-direction: column;
 }
 
@@ -67,11 +132,9 @@ html {
   flex: 1;
   display: flex;
   cursor: pointer;
-  background: red;
   align-items: center;
   justify-content: center;
   flex-direction: column;
-
 }
 
 .header .banner-section .banner-actions {
@@ -83,12 +146,12 @@ html {
 }
 
 .header .banner-section .banner-actions .banner-pre-title {
-  font-size: 1.5rem;
+  font-size: 1rem;
   text-transform: uppercase;
 }
 
 .header .banner-section .banner-actions .banner-action-title {
-  font-size: 3rem;
+  font-size: 1.2rem;
   font-weight: 400;
   font-family: 'Cinzel', serif;
 }
@@ -97,107 +160,63 @@ html {
   gap: 0.5rem;
   display: flex;
   cursor: pointer;
-  font-size: 1.1rem;
-  margin-top: 15px;
+  font-size: 0.8rem;
+  margin-top: 1rem;
   font-weight: 700;
   align-items: center;
-  padding: 0.8rem 1.4rem;
+  padding: 0.3rem 1rem;
   letter-spacing: 0.04em;
   background: transparent;
   text-transform: uppercase;
-  border: 0.010rem solid #131313;
+  border: 0.010rem solid transparent;
 }
 
 .header .banner-section .banner-source {
   width: 100%;
-  height: auto;
+  /* height: 60vh; */
 }
 
 .article {}
 
 
 .article .article-section {
-  display: flex;
-  padding: 4rem 14%;
-  background-color: #121212;
+
 }
 
-.article .article-text {
-  flex: 1;
-  gap: 30px;
-  padding: 0 6%;
-  display: flex;
-  align-items: center;
-  flex-direction: column;
-  justify-content: center;
-}
+.article .article-text { }
+
 
 .article .article-text p {
-  color: #FFFFFF;
-  font-weight: 200;
-  font-size: 1.5rem;
-  text-align: center;
-  text-transform: uppercase;
+  
 }
 
 .article .article-text h2 {
-  color: #FFFFFF;
-  font-weight: 500;
-  font-size: 2.5rem;
-  text-transform: uppercase;
+  
 }
 
 .article .videos {
-  gap: 2.5rem;
-  display: flex;
-  padding: 5rem 14%;
+  
 }
 
 .article .videos .video-card {
-  /* height: 40rem; */
-
-  flex: 1;
-  display: flex;
-  color: #FFFFFF;
-  cursor: pointer;
-  position: relative;
-  align-items: center;
-  flex-direction: column;
-  letter-spacing: 0.04rem;
-  justify-content: center;
-
-  background-color: #FFFFFF;
+  
 }
 
 .article .videos .video-card button {
-  border: none;
-  gap: 0.75rem;
-  display: flex;
-  color: #FFFFFF;
-  cursor: pointer;
-  font-weight: bold;
-  position: absolute;
-  align-items: center;
-  background: transparent;
-  text-transform: uppercase;
+  
 }
 
 .article .gallery-container {
-  /* padding-left: 14%; */
-
-  padding-top: 5rem;
-  padding-bottom: 5rem;
-  background-color: #F5F5F5;
+  
 }
 
 .article .gallery-container .slide-container {
-  /* padding-right: 14%; */
-  width: 100%;
+  
+  
 }
 
 .article .gallery-container .slide-container .swiper {
-  margin-left: 14%;
-  padding-right: 14rem;
+  
 }
 
 .article .gallery-container .slide-container .swiper .swiper-wrapper {
@@ -205,158 +224,523 @@ html {
 }
 
 .article .gallery-container .slide-container .swiper .swiper-wrapper .swiper-slide {
-  width: max-content;
+  
 }
 
 .article .gallery-container .slide-container .swiper .swiper-wrapper .image-card img {
-  width: 100%;
-  max-height: 600px;
+
 }
 
 .article .gallery-container .slide-container .swiper .swiper-wrapper .image-card.play-video {
-  cursor: pointer;
+  
 }
 
 .article .gallery-container.wedding {
-  background-color: #FFFFFF;
+  
 }
 
 .article .instagram-gallery {
-  background-color: #121212;
+  
 }
 
 
 .article .instagram-gallery {
-  gap: 3rem;
-  display: flex;
-  padding-top: 6rem;
-  padding-left: 14%;
-  padding-right: 14%;
-  padding-bottom: 4rem;
-  flex-direction: column;
+  
 }
 
 .article .instagram-gallery .content {
-  gap: 2rem;
-  display: flex;
-  align-items: center;
+  
 }
 
 .article .instagram-gallery .content .flag svg {
-  height: 40vmin;
+  
 }
 
 .article .instagram-gallery .content iframe {
-  flex: 1;
+  
 }
 
 .article .instagram-gallery .pics-gallery {
-  gap: 10px;
-  margin: auto;
-  height: 100px;
-  display: flex;
-  background:red;
-  max-width: 1144px;
+  
 }
 
 .article .instagram-gallery .pics-gallery img {
-  flex: 4;
-  /* width: 25%;
-  height: 50px; */
-  border: 1px solid white;
+  
 }
 
 .article .instagram-gallery .instagram-action {
-  color: #FFFFFF;
-  margin: auto;
-  opacity: 0.6;
-  display: block;
-  font-size: 12px;
-  font-weight: bold;
-  width: max-content;
-  padding: 12px 30px;
-  letter-spacing: 0.09rem;
-  border: 1px solid #FFFFFF;
-  text-transform: uppercase;
+  
 }
 
 .article .instagram-gallery .instagram-action:hover {
-  opacity: 1;
+  
 }
 
 .footer {
-  display: flex;
-  flex-direction: column;
+  
 }
 
 .features-container {
-  gap: 5rem;
-  display: flex;
-  padding: 6.5rem 14%;
+  
 }
 
 .feature {
-  flex: 1;
-  gap: 1rem;
-  display: flex;
-  text-align: center;
-  flex-direction: column;
+  
 }
 
 .feature h3 {
-  font-size: 1.5rem;
-  font-family: 'Cinzel', serif;
+
 }
+  
 
 .feature p {
-  font-size: 1rem;
-  line-height: 1.5rem;
-  text-transform: uppercase;
+  
+}
+
+.feature p.contact-list {
+  
+}
+
+.feature p.contact-list a {
+  
 }
 
 .footer-rights {
-  font-size: 14px;
-  padding: 4.5rem 14%;
-  border-top: 1px solid #DDDDDD;
+  
 }
 
 .dimmer {
-  top: 0;
-  left: 0;
-  display: flex;  
-  z-index: 50;
-  width: 100vw;
-  height: 100vh;
-  position: fixed;
-  align-items: center;
-  justify-content: center;
-  background: rgba(15, 15, 15, .95);
+  
 }
 
 .dimmer .dimmer-video-modal {
-  flex: 1;
-  gap: 1rem;
-  display: flex;
-  padding-left: 14%;
-  width: max-content;
-  padding-right: 14%;
-  flex-flow: row-reverse;
-  align-items: flex-start;
-  justify-content: center;
+  
 }
 
 .dimmer .dimmer-video-modal video {
-  width: auto;
-  height: 85vh;
+  
 }
 
 .button-close {
-  cursor: pointer;
-  color: #FFFFFF;
-  font-weight: bold;
-  background: transparent;
-  text-transform: uppercase;
-  border: none;
+  
+}
+
+@media (min-width: 1600px) {
+  
+  .navbar {
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 8rem;
+    display: flex;
+    padding: 0 14%;
+    position: absolute;
+    transition: all 0.2s;
+    background-color: #FFFFFF;
+  }
+
+  .sticky {
+    top: 0;
+    width: 100%;
+    z-index: 40;
+    height: 5rem;
+    position: fixed;
+    transition: all 0.2s;
+  }
+
+  .navbar.sticky .brand {
+    gap: 0;
+    transition: all;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .navbar.sticky .brand .brand-title {
+    height: 0;
+    margin-top: 0;
+    overflow: hidden;
+    transition: all .2s;
+    /* font-size: 0; */
+  }
+
+  .navbar .blank-space {
+    flex: 1;
+  }
+
+  .navbar .brand {
+    flex: 3;
+    gap: 8px;
+    display: flex;
+    transition: all .2s;
+    align-items: center;
+    flex-direction: column;
+    justify-content: center;
+  }
+
+  .navbar .brand .brand-link {
+    gap: 0;
+    display: flex;
+    align-items: center;
+  }
+
+  .navbar .brand .brand-link .wedding {
+    width: 0;
+    overflow-x: hidden;
+    transition: all .2s;
+  }
+
+  .navbar.sticky.wedding-logo .brand .brand-link {
+    transition: all;
+    gap: 1.4rem;
+  }
+
+  .navbar.sticky.wedding-logo .brand .brand-link .wedding {
+    width: 10rem;
+  }
+
+  .navbar .brand .brand-link img {
+    height: max-content;
+  }
+
+  .navbar .brand .brand-title {
+    height: 1.15rem;
+    transition: all .2s;
+    font-weight: 500;
+    font-size: 1.15rem;
+    text-align: center;
+    letter-spacing: 0.04em;
+    text-transform: uppercase;
+  }
+
+  .navbar .nav-links {
+    flex: 1;
+    gap: 30px;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+  }
+
+  .header {
+    width: 100%;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    padding-top: 8rem;
+  }
+
+  .header .banner-section {
+    flex: 1;
+    display: flex;
+    cursor: pointer;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+
+  }
+
+  .header .banner-section .banner-actions {
+    display: flex;
+    position: absolute;
+    align-items: center;
+    flex-direction: column;
+    justify-content: center;
+  }
+
+  .header .banner-section .banner-actions .banner-pre-title {
+    font-size: 1.5rem;
+    text-transform: uppercase;
+  }
+
+  .header .banner-section .banner-actions .banner-action-title {
+    font-size: 3rem;
+    font-weight: 400;
+    font-family: 'Cinzel', serif;
+  }
+
+  .header .banner-section .banner-actions .banner-action {
+    gap: 0.5rem;
+    display: flex;
+    cursor: pointer;
+    font-size: 1.1rem;
+    margin-top: 15px;
+    font-weight: 700;
+    align-items: center;
+    padding: 0.8rem 1.4rem;
+    letter-spacing: 0.04em;
+    background: transparent;
+    text-transform: uppercase;
+    border: 0.010rem solid #131313;
+  }
+
+  .header .banner-section .banner-source {
+    width: 100%;
+    height: auto;
+  }
+
+  .article {}
+
+
+  .article .article-section {
+    display: flex;
+    padding: 4rem 14%;
+    background-color: #121212;
+  }
+
+  .article .article-text {
+    flex: 1;
+    gap: 30px;
+    padding: 0 6%;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: center;
+  }
+
+  .article .article-text p {
+    color: #FFFFFF;
+    font-weight: 200;
+    font-size: 1.5rem;
+    text-align: center;
+    text-transform: uppercase;
+  }
+
+  .article .article-text h2 {
+    color: #FFFFFF;
+    font-weight: 500;
+    font-size: 2.5rem;
+    text-transform: uppercase;
+  }
+
+  .article .videos {
+    gap: 2.5rem;
+    display: flex;
+    padding: 5rem 14%;
+  }
+
+  .article .videos .video-card {
+    /* height: 40rem; */
+
+    flex: 1;
+    display: flex;
+    color: #FFFFFF;
+    cursor: pointer;
+    position: relative;
+    align-items: center;
+    flex-direction: column;
+    letter-spacing: 0.04rem;
+    justify-content: center;
+
+    background-color: #FFFFFF;
+  }
+
+  .article .videos .video-card button {
+    border: none;
+    gap: 0.75rem;
+    display: flex;
+    color: #FFFFFF;
+    cursor: pointer;
+    font-weight: bold;
+    position: absolute;
+    align-items: center;
+    background: transparent;
+    text-transform: uppercase;
+  }
+
+  .article .gallery-container {
+    /* padding-left: 14%; */
+
+    padding-top: 5rem;
+    padding-bottom: 5rem;
+    background-color: #F5F5F5;
+  }
+
+  .article .gallery-container .slide-container {
+    /* padding-right: 14%; */
+    width: 100%;
+  }
+
+  .article .gallery-container .slide-container .swiper {
+    margin-left: 14%;
+    padding-right: 14rem;
+  }
+
+  .article .gallery-container .slide-container .swiper .swiper-wrapper {
+    
+  }
+
+  .article .gallery-container .slide-container .swiper .swiper-wrapper .swiper-slide {
+    width: max-content;
+  }
+
+  .article .gallery-container .slide-container .swiper .swiper-wrapper .image-card img {
+    width: 100%;
+    max-height: 600px;
+  }
+
+  .article .gallery-container .slide-container .swiper .swiper-wrapper .image-card.play-video {
+    cursor: pointer;
+  }
+
+  .article .gallery-container.wedding {
+    background-color: #FFFFFF;
+  }
+
+  .article .instagram-gallery {
+    background-color: #121212;
+  }
+
+
+  .article .instagram-gallery {
+    gap: 3rem;
+    display: flex;
+    padding-top: 6rem;
+    padding-left: 14%;
+    padding-right: 14%;
+    padding-bottom: 4rem;
+    flex-direction: column;
+  }
+
+  .article .instagram-gallery .content {
+    gap: 2rem;
+    display: flex;
+    align-items: center;
+  }
+
+  .article .instagram-gallery .content .flag svg {
+    height: 40vmin;
+  }
+
+  .article .instagram-gallery .content iframe {
+    flex: 1;
+  }
+
+  .article .instagram-gallery .pics-gallery {
+    gap: 10px;
+    margin: auto;
+    height: 100px;
+    display: flex;
+    background:red;
+    max-width: 1144px;
+  }
+
+  .article .instagram-gallery .pics-gallery img {
+    flex: 4;
+    /* width: 25%;
+    height: 50px; */
+    border: 1px solid white;
+  }
+
+  .article .instagram-gallery .instagram-action {
+    color: #FFFFFF;
+    margin: auto;
+    opacity: 0.6;
+    display: block;
+    font-size: 12px;
+    font-weight: bold;
+    width: max-content;
+    padding: 12px 30px;
+    letter-spacing: 0.09rem;
+    border: 1px solid #FFFFFF;
+    text-transform: uppercase;
+  }
+
+  .article .instagram-gallery .instagram-action:hover {
+    opacity: 1;
+  }
+
+  .footer {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .features-container {
+    gap: 5rem;
+    display: flex;
+    padding: 6.5rem 14%;
+  }
+
+  .feature {
+    flex: 1;
+    gap: 1rem;
+    display: flex;
+    align-items: center;
+    text-align: center;
+    flex-direction: column;
+  }
+
+  .feature h3 {
+    font-size: 1.5rem;
+    font-family: 'Cinzel', serif;
+  }
+
+  .feature p {
+    font-size: 1rem;
+    line-height: 1.5rem;
+    text-transform: uppercase;
+  }
+
+  .feature p.contact-list {
+    gap: 1rem;
+    display: flex;  
+    max-width: max-content;
+    align-items: flex-start;
+    flex-direction: column;
+  }
+
+  .feature p.contact-list a {
+    gap: 0.5rem;
+    display: flex;
+    color: #121212;
+    align-items: center;
+  }
+
+  .footer-rights {
+    display: flex;
+    font-size: 14px;
+    padding: 4.5rem 14%;
+    align-items: center;
+    border-top: 1px solid #DDDDDD;
+    justify-content: space-between;
+  }
+
+  .dimmer {
+    top: 0;
+    left: 0;
+    display: flex;  
+    z-index: 50;
+    width: 100vw;
+    height: 100vh;
+    position: fixed;
+    align-items: center;
+    justify-content: center;
+    background: rgba(15, 15, 15, .95);
+  }
+
+  .dimmer .dimmer-video-modal {
+    flex: 1;
+    gap: 1rem;
+    display: flex;
+    padding-left: 14%;
+    width: max-content;
+    padding-right: 14%;
+    flex-flow: row-reverse;
+    align-items: flex-start;
+    justify-content: center;
+  }
+
+  .dimmer .dimmer-video-modal video {
+    width: auto;
+    height: 85vh;
+  }
+
+  .button-close {
+    cursor: pointer;
+    color: #FFFFFF;
+    font-weight: bold;
+    background: transparent;
+    text-transform: uppercase;
+    border: none;
+  }
 }
 
 .hidden {
