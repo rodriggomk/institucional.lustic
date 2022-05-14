@@ -57,9 +57,7 @@ html {
   flex-direction: column;
 }
 
-.navbar.sticky .brand {
-  
-}
+.navbar.sticky .brand {}
 
 
 .navbar .brand .brand-link {
@@ -69,7 +67,7 @@ html {
 }
 
 .navbar .brand .brand-link .wedding {
-  max-height: 1.8rem;
+  max-height: 2rem;
 }
 
 .navbar .brand .brand-link .wedding svg {
@@ -84,7 +82,8 @@ html {
 }
 
 .navbar.sticky.wedding-logo .brand .brand-link .wedding {
-  max-height: 1.8rem;
+  max-height: 2rem;
+  overflow-y: hidden;
   margin-left: 0.8rem;
 }
 
@@ -171,6 +170,10 @@ html {
   border: 0.010rem solid transparent;
 }
 
+.header .banner-section .banner-source.desktop {
+  display: none;
+}
+
 .header .banner-section .banner-source {
   width: 100%;
   /* height: 60vh; */
@@ -180,152 +183,289 @@ html {
 
 
 .article .article-section {
-
+  gap: 2rem;
+  display: flex;
+  padding: 4rem 3%;
+  flex-direction: column;
+  background-color: #121212;
 }
 
-.article .article-text { }
+.article .article-text {
+  flex: 1;
+  gap: 1.5rem;
+  padding: 0 3%;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  justify-content: center;
+}
 
 
 .article .article-text p {
-  
+  color: #FFFFFF;
+  font-weight: 200;
+  font-size: 1rem;
+  text-align: center;
+  text-transform: uppercase;
 }
 
 .article .article-text h2 {
-  
+  color: #FFFFFF;
+  font-weight: 500;
+  font-size: 2rem;
+  text-transform: uppercase;
 }
 
 .article .videos {
-  
+  gap: 1rem;
+  display: flex;
+  flex-wrap: wrap;
+  padding: 1rem 3%;
 }
 
 .article .videos .video-card {
-  
+  flex: 1;
+  display: flex;
+  color: #FFFFFF;
+  cursor: pointer;
+  position: relative;
+  align-items: center;
+  flex-direction: column;
+  letter-spacing: 0.04rem;
+  justify-content: center;
+
+  background-color: #FFFFFF;
+}
+
+.article .videos .video-card img {
+  width: 100%;
 }
 
 .article .videos .video-card button {
-  
+  border: none;
+  gap: 0.75rem;
+  display: flex;
+  font-size: 0.7rem;
+  flex-direction: column;
+  color: #FFFFFF;
+  cursor: pointer;
+  font-weight: bold;
+  position: absolute;
+  align-items: center;
+  background: transparent;
+  text-transform: uppercase;
 }
 
+
 .article .gallery-container {
-  
+  padding-top: 1rem;
+  padding-bottom: 1rem;
+  background-color: #F5F5F5;
 }
 
 .article .gallery-container .slide-container {
-  
-  
+  width: 100%;
 }
 
 .article .gallery-container .slide-container .swiper {
-  
+  margin-left: 3%;
+  padding-right: 3%;
 }
 
 .article .gallery-container .slide-container .swiper .swiper-wrapper {
-  
+  width: max-content;
 }
 
 .article .gallery-container .slide-container .swiper .swiper-wrapper .swiper-slide {
-  
+  width: 100%;
+  max-height: auto;
+}
+.article .gallery-container .slide-container .swiper .swiper-wrapper .image-card img {
+  max-width: 98%;
+  /* height: auto; */
+  /* max-height: 600px; */
 }
 
-.article .gallery-container .slide-container .swiper .swiper-wrapper .image-card img {
-
+.article .gallery-container.wedding .slide-container .swiper .swiper-wrapper .image-card img {
+  max-width: auto;
+  height: auto;
 }
 
 .article .gallery-container .slide-container .swiper .swiper-wrapper .image-card.play-video {
-  
+  cursor: pointer;
 }
 
 .article .gallery-container.wedding {
-  
+  background-color: #FFFFFF; 
 }
 
 .article .instagram-gallery {
-  
+  background-color: #121212;
 }
 
 
 .article .instagram-gallery {
-  
+  gap: 1rem;
+  display: flex;
+  padding-top: 1rem;
+  padding-left: 3%;
+  padding-right: 3%;
+  padding-bottom:2rem;
+  flex-direction: column;
 }
 
 .article .instagram-gallery .content {
-  
+  gap: 0;
+  display: flex;
+  align-items: center;
 }
 
 .article .instagram-gallery .content .flag svg {
-  
+  display: none;
 }
 
 .article .instagram-gallery .content iframe {
-  
+  flex: 1;
 }
 
 .article .instagram-gallery .pics-gallery {
-  
+  gap: 10px;
+  margin: auto;
+  height: 100px;
+  display: flex;
+  background:red;
+  max-width: 1144px;
 }
 
 .article .instagram-gallery .pics-gallery img {
-  
+  flex: 4;
+  /* width: 25%;
+  height: 50px; */
+  border: 1px solid white;
 }
 
 .article .instagram-gallery .instagram-action {
-  
+  color: #FFFFFF;
+  margin: auto;
+  opacity: 0.6;
+  display: block;
+  font-size: 12px;
+  font-weight: bold;
+  width: max-content;
+  padding: 12px 30px;
+  letter-spacing: 0.09rem;
+  border: 1px solid #FFFFFF;
+  text-transform: uppercase;
 }
 
 .article .instagram-gallery .instagram-action:hover {
-  
+  opacity: 1;
 }
 
 .footer {
-  
+  display: flex;
+  flex-direction: column;
 }
 
 .features-container {
-  
+  gap: 2rem;
+  display: flex;
+  padding: 1rem 6%;
+  flex-direction: column;
+  margin-bottom: 1rem;
 }
 
 .feature {
-  
+  flex: 1;
+  gap: 1rem;
+  display: flex;
+  align-items: center;
+  text-align: center;
+  flex-direction: column;
 }
 
 .feature h3 {
-
+  font-size: 1.2rem;
+  font-family: 'Cinzel', serif;
 }
   
 
 .feature p {
-  
+  font-size: 0.8rem;
+  line-height: 1rem;
+  text-transform: uppercase;
 }
 
 .feature p.contact-list {
-  
+  gap: 1rem;
+  display: flex;  
+  max-width: max-content;
+  align-items: flex-start;
+  flex-direction: column;
 }
 
 .feature p.contact-list a {
-  
+  gap: 0.5rem;
+  display: flex;
+  color: #121212;
+  align-items: center;
 }
 
 .footer-rights {
-  
+  text-align: center;
+  gap: 1rem;
+  display: flex;
+  font-size: 14px;
+  padding: 1rem 5%;
+  padding-top: 2rem;
+  align-items: center;
+  flex-direction: column;
+  border-top: 1px solid #DDDDDD;
+  justify-content: space-between;
 }
 
 .dimmer {
-  
+  top: 0;
+  left: 0;
+  display: flex;  
+  z-index: 50;
+  width: 100vw;
+  height: 100vh;
+  position: fixed;
+  align-items: center;
+  justify-content: center;
+  background: rgba(15, 15, 15, .95);
 }
 
 .dimmer .dimmer-video-modal {
-  
+  flex: 1;
+  gap: 1rem;
+  display: flex;
+  flex-flow: column-reverse;
+  width: max-content;
+  align-items: center;
+  justify-content: center;
 }
 
 .dimmer .dimmer-video-modal video {
-  
+  width: 100%;
+  height: 85vh;
 }
 
 .button-close {
+  cursor: pointer;
+  color: #FFFFFF;
+  font-weight: bold;
+  background: transparent;
+  text-transform: uppercase;
+  border: none;
+}
+
+@media(min-width: 1200px) {
   
 }
 
-@media (min-width: 1600px) {
+@media (min-width: 1200px) {
   
   .navbar {
     top: 0;
@@ -333,6 +473,7 @@ html {
     width: 100%;
     height: 8rem;
     display: flex;
+    flex-direction: row;
     padding: 0 14%;
     position: absolute;
     transition: all 0.2s;
@@ -381,6 +522,7 @@ html {
     gap: 0;
     display: flex;
     align-items: center;
+    
   }
 
   .navbar .brand .brand-link .wedding {
@@ -457,6 +599,16 @@ html {
     font-family: 'Cinzel', serif;
   }
 
+  .header .banner-section .banner-source.mobile {
+    display: none;
+  }
+
+  .header .banner-section .banner-source.desktop {
+    display: block;
+    width: 100%;
+    height: auto;
+  }
+
   .header .banner-section .banner-actions .banner-action {
     gap: 0.5rem;
     display: flex;
@@ -472,24 +624,20 @@ html {
     border: 0.010rem solid #131313;
   }
 
-  .header .banner-section .banner-source {
-    width: 100%;
-    height: auto;
-  }
-
   .article {}
 
 
   .article .article-section {
     display: flex;
+    flex-direction: row;
     padding: 4rem 14%;
     background-color: #121212;
   }
 
   .article .article-text {
     flex: 1;
-    gap: 30px;
-    padding: 0 6%;
+    gap: 2rem;
+    padding: 0 4%;
     display: flex;
     align-items: center;
     flex-direction: column;
@@ -499,7 +647,7 @@ html {
   .article .article-text p {
     color: #FFFFFF;
     font-weight: 200;
-    font-size: 1.5rem;
+    font-size: 1.3rem;
     text-align: center;
     text-transform: uppercase;
   }
@@ -569,12 +717,17 @@ html {
   }
 
   .article .gallery-container .slide-container .swiper .swiper-wrapper .swiper-slide {
-    width: max-content;
+    
   }
 
   .article .gallery-container .slide-container .swiper .swiper-wrapper .image-card img {
-    width: 100%;
-    max-height: 600px;
+    /* width: 10rem; */
+    /* height: 600px; */
+  }
+
+  .article .gallery-container.wedding .slide-container .swiper .swiper-wrapper .image-card img {
+    /* max-width: auto;
+    height: auto; */
   }
 
   .article .gallery-container .slide-container .swiper .swiper-wrapper .image-card.play-video {
@@ -654,9 +807,10 @@ html {
   }
 
   .features-container {
-    gap: 5rem;
+    gap: 3rem;
     display: flex;
-    padding: 6.5rem 14%;
+    flex-direction: row;
+    padding: 6rem 10%;
   }
 
   .feature {
@@ -699,6 +853,7 @@ html {
     font-size: 14px;
     padding: 4.5rem 14%;
     align-items: center;
+    flex-direction: row;
     border-top: 1px solid #DDDDDD;
     justify-content: space-between;
   }

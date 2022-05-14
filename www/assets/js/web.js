@@ -1,3 +1,5 @@
+var wrapper = document.querySelector('.swiper-wrapper');
+
 window.onscroll = () => stickyNavMenu();
 
 var weedingGalery = document.getElementById('wedding-gallery');
@@ -12,7 +14,7 @@ function stickyNavMenu() {
     navbar.classList.remove('sticky');
   } 
 
-  if ((window.pageYOffset+300) >= distance) {
+  if ((window.pageYOffset+800) >= distance) {
     navbar.classList.add('wedding-logo')
   } else {
     navbar.classList.remove('wedding-logo')
@@ -46,11 +48,17 @@ closePlayerButton.addEventListener('click', () => {
 
 function initSwiper() {
   var swiper = new Swiper(".mySwiper", {
-    slidesPerView: "auto",
-    spaceBetween: 40,
+    slidesPerView: 2,
+    spaceBetween: 10,
     grabCursor: true,
     autoplay: true,
     loop: true,
+    breakpoints: {
+      1200: {
+        slidesPerView: 3,
+        spaceBetween: 40,
+      },
+    },
   });
 }
 
