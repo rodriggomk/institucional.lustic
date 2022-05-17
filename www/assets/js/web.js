@@ -14,7 +14,10 @@ function stickyNavMenu() {
     navbar.classList.remove('sticky');
   } 
 
-  if ((window.pageYOffset+800) >= distance) {
+  console.log(distance)
+  console.log(window.pageYOffset)
+
+  if ((window.pageYOffset+200) >= distance) {
     navbar.classList.add('wedding-logo')
   } else {
     navbar.classList.remove('wedding-logo')
@@ -48,15 +51,15 @@ closePlayerButton.addEventListener('click', () => {
 
 function initSwiper() {
   var swiper = new Swiper(".mySwiper", {
-    slidesPerView: 2,
-    spaceBetween: 10,
+    slidesPerView: 'auto',
+    spaceBetween: 15,
     grabCursor: true,
     autoplay: true,
     loop: true,
     breakpoints: {
       1200: {
-        slidesPerView: 3,
-        spaceBetween: 40,
+        /* slidesPerView: 3,
+        spaceBetween: 40, */
       },
     },
   });

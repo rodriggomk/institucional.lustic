@@ -264,31 +264,44 @@ html {
 }
 
 .article .gallery-container .slide-container {
-  width: 100%;
+  /* width: 100%; */
 }
 
 .article .gallery-container .slide-container .swiper {
-  margin-left: 3%;
-  padding-right: 3%;
+  /* margin-left: 3%; */
+  /* 
+  padding-right: 3%; */
+  
 }
 
 .article .gallery-container .slide-container .swiper .swiper-wrapper {
-  width: max-content;
+  /* background:red; */
+  margin-left: 3%;
 }
 
 .article .gallery-container .slide-container .swiper .swiper-wrapper .swiper-slide {
-  width: 100%;
-  max-height: auto;
+  /* width: 100%; */
+  flex-shrink: unset;
+  width: max-content;
+  position: relative;
+  
 }
 .article .gallery-container .slide-container .swiper .swiper-wrapper .image-card img {
-  max-width: 98%;
+  max-height: 240px;
+ /*  width: auto;
+  height: 100%; */
   /* height: auto; */
   /* max-height: 600px; */
+  /* width: 100%; */
 }
 
 .article .gallery-container.wedding .slide-container .swiper .swiper-wrapper .image-card img {
-  max-width: auto;
-  height: auto;
+  /* height: auto; */
+  /* height: 30rem; */
+  /* display: flex;
+  width: auto;
+  height: 100%; */
+  /* max-height: 30rem; */
 }
 
 .article .gallery-container .slide-container .swiper .swiper-wrapper .image-card.play-video {
@@ -315,13 +328,22 @@ html {
 }
 
 .article .instagram-gallery .content {
+  padding-top: 3rem;
   gap: 0;
   display: flex;
   align-items: center;
 }
 
+.article .instagram-gallery .content .blank-space {
+  width: 5vmin;
+  margin-right: 0.5rem;
+}
+
 .article .instagram-gallery .content .flag svg {
-  display: none;
+  /* display: none; */
+  width: 5vmin;
+  height: max-content;
+  margin-right: 0.5rem;
 }
 
 .article .instagram-gallery .content iframe {
@@ -533,11 +555,11 @@ html {
 
   .navbar.sticky.wedding-logo .brand .brand-link {
     transition: all;
-    gap: 1.4rem;
+    gap: 0;
   }
 
   .navbar.sticky.wedding-logo .brand .brand-link .wedding {
-    width: 10rem;
+    width: max-content;
   }
 
   .navbar .brand .brand-link img {
@@ -703,17 +725,15 @@ html {
   }
 
   .article .gallery-container .slide-container {
-    /* padding-right: 14%; */
     width: 100%;
   }
 
   .article .gallery-container .slide-container .swiper {
     margin-left: 14%;
-    padding-right: 14rem;
   }
 
   .article .gallery-container .slide-container .swiper .swiper-wrapper {
-    
+    margin-left: 0;
   }
 
   .article .gallery-container .slide-container .swiper .swiper-wrapper .swiper-slide {
@@ -721,8 +741,8 @@ html {
   }
 
   .article .gallery-container .slide-container .swiper .swiper-wrapper .image-card img {
-    /* width: 10rem; */
-    /* height: 600px; */
+    min-height: 24rem;
+    max-height: 400px;
   }
 
   .article .gallery-container.wedding .slide-container .swiper .swiper-wrapper .image-card img {
@@ -900,4 +920,11 @@ html {
 
 .hidden {
   display: none;
+}
+
+@media(min-width: 1400px) {
+  .article .gallery-container .slide-container .swiper .swiper-wrapper .image-card img {
+    min-height: 30rem;
+    max-height: 600px;
+  }
 }
